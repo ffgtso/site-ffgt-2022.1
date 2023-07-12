@@ -11,12 +11,15 @@ diff --git a/targets/ath79-generic b/targets/ath79-generic
 index 2162caee..ad3e8719 100644
 --- a/targets/ath79-generic
 +++ b/targets/ath79-generic
-@@ -187,6 +187,9 @@ device('netgear-wnr2200-16m', 'netgear_wnr2200-16m', {
+@@ -187,6 +187,12 @@ device('netgear-wnr2200-16m', 'netgear_wnr2200-16m', {
  	factory_ext = '.img',
  })
  
-+device('netgear-wndrmacv2', 'netgear_wndrmac-v2', {
++device('netgear-wndrmac-v2', 'netgear_wndrmac-v2', {
 +	factory_ext = '.img',
++	manifest_aliases = {
++		'netgear-wndrmacv2', -- Upgrade from OpenWrt 19.07
++	},
 +})
  
  -- OCEDO
