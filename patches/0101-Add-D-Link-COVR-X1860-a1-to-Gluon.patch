@@ -1,0 +1,25 @@
+From e7509a808513e3ada5d4f77628a2df847a9eebd8 Mon Sep 17 00:00:00 2001
+From: FFGT Admins <info@4830.org>
+Date: Thu, 28 Sep 2023 12:30:49 +0000
+Subject: [PATCH] Add D-Link COVR X1860 a1 to Gluon.
+
+---
+ targets/ramips-mt7621 | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/targets/ramips-mt7621 b/targets/ramips-mt7621
+index 46afa067..aabd06e4 100644
+--- a/targets/ramips-mt7621
++++ b/targets/ramips-mt7621
+@@ -28,6 +28,8 @@ device('cudy-x6-v2', 'cudy_x6-v2', {
+ 
+ device('d-link-dap-x1860-a1', 'dlink_dap-x1860-a1')
+ 
++device('d-link-covr-x1860-a1', 'dlink_covr-x1860-a1')
++
+ device('d-link-dir-860l-b1', 'dlink_dir-860l-b1')
+ 
+ 
+-- 
+2.30.2
+
