@@ -27,6 +27,12 @@ GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 	GLUON_AUTOUPDATER_ENABLED=${GLUON_AUTOUPDATER_ENABLED} \
     --output-sync=target BUILD_LOG=1 V=s
 
+GLUON_MAKE_D := ${MAKE} -d -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+	GLUON_RELEASE=${GLUON_RELEASE} \
+	GLUON_AUTOUPDATER_BRANCH=${GLUON_AUTOUPDATER_BRANCH} \
+	GLUON_AUTOUPDATER_ENABLED=${GLUON_AUTOUPDATER_ENABLED} \
+    --output-sync=target BUILD_LOG=1 V=s
+
 all: info
 	${MAKE} manifest
 
@@ -74,7 +80,7 @@ gluon-update: | ${GLUON_BUILD_DIR}/.git
 gluon-prepare: gluon-update
 	make gluon-patch
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
-	${GLUON_MAKE} update
+	${GLUON_MAKE_D} update
 	cat /dev/null >/tmp/build-${RELEASE}.log
 	echo $$(date +%s) > ${GLUON_BUILD_DIR}/openwrt/version.date
 	(cd ${GLUON_BUILD_DIR}/openwrt ; git add version.date ; git commit -m "Build with current time.")
