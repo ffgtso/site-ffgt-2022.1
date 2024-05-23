@@ -11,6 +11,7 @@ includes some additional modules.
    1.1.5: v2018.2.x based, L2TP (tunneldigger)
    1.1.6: v2018.2.x based, VXLAN via Wireguard
    1.2.0: v2019.1.x based, L2TP (tunneldigger) (>= 1.2.0~38 includes the BROKEN gluon-migrate-ffbi)
+   1.2.5: v2019.1.x based, fastd+batman14 — FFUE-Migration
    1.4.0: v2021.1.x based, L2TP (tunneldigger) (>= 1.4.0~48 includes a WORKING gluon-migrate-ffbiv2, ~50 fflg-migrate-to-multidomain)
    1.5.0: v2022.1.x based, L2TP (tunneldigger)
 
